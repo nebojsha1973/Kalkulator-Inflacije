@@ -27,11 +27,7 @@ function inflationCalculator() {
     */
 
     if (Number.isNaN(inflationRate) || Number.isNaN(money) || Number.isNaN(years)) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Greška',
-        text: 'Niste uneli neki podatak!'
-      });
+      alert('Niste uneli neki podatak!');
 
       return;
 }
@@ -56,3 +52,4 @@ function inflationCalculator() {
     document.querySelector('.container').appendChild(newElement);
 
 }  
+
