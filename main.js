@@ -27,7 +27,12 @@ function inflationCalculator() {
     */
 
     if (Number.isNaN(inflationRate) || Number.isNaN(money) || Number.isNaN(years)) {
-      alert('Niste uneli neki podatak!');
+      Swal.fire({
+        icon: 'error',
+        title: 'Greška',
+        text: 'Niste uneli neki podatak!'
+      });
+
       return;
 }
 
@@ -50,4 +55,4 @@ function inflationCalculator() {
     newElement.innerText = `Današnjih ${money} eura vredi isto kao ${worth} eura za ${years} godina.`;
     document.querySelector('.container').appendChild(newElement);
 
-}    
+}  
