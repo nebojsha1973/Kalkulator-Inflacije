@@ -10,6 +10,8 @@ function inflationCalculator() {
     let years = document.querySelector('#years').value;
     years = parseFloat(years);
     console.log(years);
+    console.log(money);
+    console.log(inflationRate);
 
     /*
     console.log(typeof(inflationRate));
@@ -23,6 +25,12 @@ function inflationCalculator() {
     console.log(typeof(sabiranje)); //proverava tip promenjive
 
     */
+
+    if (Number.isNaN(inflationRate) || Number.isNaN(money) || Number.isNaN(years)) {
+      alert('Niste uneli neki podatak!');
+      return;
+}
+
 
   //Formula za izracunavanje inflacije:
 
